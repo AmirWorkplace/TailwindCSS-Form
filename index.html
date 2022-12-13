@@ -52,6 +52,10 @@
         width: 0 !important;
       }
 
+      .mt-\[27\.5px\] {
+        margin-top: 27.5px;
+      }
+
       .con-pass-sec.active i:nth-child(3) {
         display: none;
       }
@@ -182,10 +186,10 @@
             placeholder="@Example: #@ldkM67/5$ldm009!" />
           <i
             id="show-pass"
-            class="bx mb-25px bx-low-vision absolute right-0 bottom-0 text-4xl ml-[0px] mr-[10px] mb-[5px] mt-[0px] p-1 rounded-full duration-300 hover:text-red-500 text-green-500"></i>
+            class="bx bx-low-vision absolute right-0 top-0 text-4xl ml-[0px] mr-[10px] p-1 mt-[27.5px] rounded-full duration-300 hover:text-red-500 text-green-500"></i>
           <i
             id="hide-pass"
-            class="bx bx-show-alt absolute right-0 bottom-0 text-4xl ml-[0px] mr-[10px] mb-[5px] mt-[0px] p-1 rounded-full duration-300 text-red-500 hover:text-green-500"></i>
+            class="bx bx-show-alt absolute right-0 top-0 text-4xl ml-[0px] mr-[10px] p-1 mt-[27.5px] rounded-full duration-300 text-red-500 hover:text-green-500"></i>
           <p
             id="pass-alert"
             class="hidden mt-[2px] text-sm text-red-500 font-nor mx-2 capitalize">
@@ -315,12 +319,12 @@
         if (pass[0].value.length <= 7 && pass[1].value.length <= 7) {
           qs("#login__submit").classList.add("pointer-events-none")
           qs("#pass-alert").classList.remove("hidden")
-          qs(".mb-25px").classList.add("mb-[25px]")
+          // qs(".mb-25px").classList.add("mb-[25px]")
           console.log("Your Password Length Less Than 8 Character")
         } else {
           qs("#login__submit").classList.remove("pointer-events-none")
           qs("#pass-alert").classList.add("hidden")
-          qs(".mb-25px").classList.remove("mb-[25px]")
+          // qs(".mb-25px").classList.remove("mb-[25px]")
         }
       }
 

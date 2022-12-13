@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lgin Form</title>
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="/dist/output.css" />
+    <!-- <link rel="stylesheet" href="./style.css" /> -->
+    <!-- Some Simple Custom CSS -->
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Bilbo+Swash+Caps&family=Codystar:wght@300;400&family=Dancing+Script:wght@500&family=Italianno&family=Knewave&family=Pacifico&family=Poppins:ital,wght@0,100;0,400;0,700;0,900;1,600&family=Roboto+Mono:ital,wght@0,100;0,200;0,400;0,700;1,100;1,400;1,700&family=Rubik+Distressed&family=Rubik+Marker+Hatch&display=swap");
+
+      .font-bsc {
+        font-family: "Bilbo Swash Caps", cursive !important;
+      }
+      .font-c {
+        font-family: "Codystar", cursive !important;
+      }
+      .font-ds {
+        font-family: "Dancing Script", cursive !important;
+      }
+      .font-i {
+        font-family: "Italianno", cursive !important;
+      }
+      .font-k {
+        font-family: "Knewave", cursive !important;
+      }
+      .font-pacifico {
+        font-family: "Pacifico", cursive !important;
+      }
+      .font-poppins {
+        font-family: "Poppins", sans-serif !important;
+      }
+      .font-rm {
+        font-family: "Roboto Mono", monospace !important;
+      }
+      .font-rd {
+        font-family: "Rubik Distressed", cursive !important;
+      }
+      .font-rmh {
+        font-family: "Rubik Marker Hatch", cursive !important;
+      }
+
+      body::-webkit-scrollbar {
+        width: 0 !important;
+      }
+
+      .con-pass-sec.active i:nth-child(3) {
+        display: none;
+      }
+      .con-pass-sec.active i:nth-child(4) {
+        display: block;
+      }
+
+      .con-pass-sec i:nth-child(4) {
+        display: none;
+      }
+      .con-pass-sec i:nth-child(3) {
+        display: block;
+      }
+
+      .pass-sec.active i:nth-child(3) {
+        display: none;
+      }
+      .pass-sec.active i:nth-child(4) {
+        display: block;
+      }
+
+      .pass-sec i:nth-child(4) {
+        display: none;
+      }
+      .pass-sec i:nth-child(3) {
+        display: block;
+      }
+
+      #submit-box button:nth-child(1) {
+        display: block;
+      }
+      #submit-box button:nth-child(2) {
+        display: none;
+      }
+      #submit-box.active button:nth-child(1) {
+        display: none;
+      }
+      #submit-box.active button:nth-child(2) {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <section
+      class="form-section w-full min-h-screen max-h-full flex flex-col items-center justify-center bg-slate-900 text-slate-300 font-normal p-4">
+      <div
+        class="log-form-heading mb-4 sm:w-[600px] w-[360px] h-auto p-3 text-slate-900 bg-cyan-500 rounded-lg flex flex-row justify-center items-center">
+        <img
+          src="./welcomes.jpg"
+          class="w-12 h-12 ring-slate-300 ring-2 ring-offset-2 rounded-full mr-4" />
+        <div class="title h-full flex flex-row justify-center items-center">
+          <h1
+            class="uppercase font-pacifico font-bold sm:text-2xl text-[1.1rem]">
+            welcome our family
+          </h1>
+          <h1
+            class="uppercase text-[1.5rem] font-rmh sm:text-4xl ml-2 text-slate-100">
+            iotlink
+          </h1>
+        </div>
+      </div>
+      <!-- Form Started -->
+      <form
+        action=""
+        method="POST"
+        id="login__form"
+        class="login-form sm:w-[600px] w-[360px] items-center justify-center flex flex-col h-full p-4 ring-4 ring-slate-500 bg-slate-900 text-slate-200 rounded-lg">
+        <span class="hidden">@csrf</span>
+        <div
+          class="msg-box w-full h-auto flex flex-col items-center justify-center mb-2"
+          id="msg-box">
+          <p
+            class="capitalize text-xl mb-1 p-1 text-slate-900 bg-green-600 rounded-md text-center w-full h-auto tracking-wide font-bold"
+            id="msg-container">
+            Please give us your right Informatios.
+          </p>
+        </div>
+        <div
+          id="log-inp-group"
+          class="log-inp-group rounded-md mb-2 w-full p-3 h-full flex flex-col items-start justify-start bg-slate-700 text-slate-300 text-300">
+          <label for="name" class="text-slate-300 text-xl font-semibold mb-1">
+            Type Your First Name:
+          </label>
+          <input
+            type="text"
+            name="fname"
+            id="fname"
+            class="login-input w-full px-2 p-1 ring-4 ring-green-900 rounded-md outline-none bg-slate-900 text-white tracking-wide text-lg font-normal"
+            placeholder="@Example: SYED AMIR" />
+        </div>
+        <div
+          id="log-inp-group"
+          class="log-inp-group rounded-md mb-2 w-full p-3 h-full flex flex-col items-start justify-start bg-slate-700 text-slate-300 text-300">
+          <label for="name" class="text-slate-300 text-xl font-semibold mb-1">
+            Type Your Last Name:
+          </label>
+          <input
+            type="text"
+            name="lname"
+            id="lname"
+            class="login-input w-full px-2 p-1 ring-4 ring-green-900 rounded-md outline-none bg-slate-900 text-white tracking-wide text-lg font-normal"
+            placeholder="@Example: Ali" />
+        </div>
+        <div
+          id="log-inp-group"
+          class="log-inp-group rounded-md mb-2 w-full p-3 h-full flex flex-col items-start justify-start bg-slate-700 text-slate-300 text-300">
+          <label for="name" class="text-slate-300 text-xl font-semibold mb-1">
+            Type Your Original Email:
+          </label>
+          <input
+            type="email"
+            name="fname"
+            id="firsrname"
+            class="login-input w-full px-2 p-1 ring-4 ring-green-900 rounded-md outline-none bg-slate-900 text-white tracking-wide text-lg font-normal"
+            placeholder="@Example: syedamirali@gmail.com" />
+        </div>
+        <div
+          id="log-inp-group"
+          class="log-inp-group pass-sec relative rounded-md mb-2 w-full p-3 h-full flex flex-col items-start justify-start bg-slate-700 text-slate-300 text-300">
+          <label for="name" class="text-slate-300 text-xl font-semibold mb-1">
+            Type a Strong Password:
+          </label>
+          <input
+            type="password"
+            name="password"
+            id="password"
+            class="input-pass login-input w-full px-2 p-1 ring-4 ring-green-900 rounded-md outline-none bg-slate-900 text-white tracking-wide text-lg font-normal"
+            placeholder="@Example: #@ldkM67/5$ldm009!" />
+          <i
+            id="show-pass"
+            class="bx mb-25px bx-low-vision absolute right-0 bottom-0 text-4xl ml-[0px] mr-[10px] mb-[5px] mt-[0px] p-1 rounded-full duration-300 hover:text-red-500 text-green-500"></i>
+          <i
+            id="hide-pass"
+            class="bx bx-show-alt absolute right-0 bottom-0 text-4xl ml-[0px] mr-[10px] mb-[5px] mt-[0px] p-1 rounded-full duration-300 text-red-500 hover:text-green-500"></i>
+          <p
+            id="pass-alert"
+            class="hidden mt-[2px] text-sm text-red-500 font-nor mx-2 capitalize">
+            Your Password Length Less Than 8 Character
+          </p>
+        </div>
+        <div
+          id="log-inp-group"
+          class="log-inp-group con-pass-sec relative rounded-md mb-2 w-full p-3 h-full flex flex-col items-start justify-start bg-slate-700 text-slate-300 text-300">
+          <label for="name" class="text-slate-300 text-xl font-semibold mb-1">
+            Re-Type a this Password:
+          </label>
+          <input
+            type="password"
+            name="con_password"
+            id="con_password"
+            class="input-pass login-input w-full px-2 p-1 ring-4 ring-green-900 rounded-md outline-none bg-slate-900 text-white tracking-wide text-lg font-normal"
+            placeholder="@Example: #@ldkM67/5$ldm009!" />
+          <i
+            id="show-cpass"
+            class="bx bx-low-vision absolute right-0 bottom-0 text-4xl ml-[0px] mr-[10px] mb-[5px] mt-[0px] p-1 rounded-full duration-300 hover:text-red-500 text-green-500"></i>
+          <i
+            id="hide-cpass"
+            class="bx bx-show-alt absolute right-0 bottom-0 text-4xl ml-[0px] mr-[10px] mb-[5px] mt-[0px] p-1 rounded-full duration-300 text-red-500 hover:text-green-500"></i>
+        </div>
+        <div
+          id="log-inp-group"
+          class="log-inp-group rounded-md mb-2 w-full p-3 h-full flex flex-col items-start justify-start bg-slate-700 text-slate-300 text-300">
+          <label for="name" class="text-slate-300 text-xl font-semibold mb-1">
+            Type Your Details:
+          </label>
+          <textarea
+            type="text"
+            name="email"
+            id="email"
+            class="login-input w-full px-2 p-1 h-32 ring-1 ring-green-900 rounded-md outline-none bg-slate-900 text-white tracking-wide text-lg font-normal"
+            placeholder="@Example: syedamirali@gmail.com"></textarea>
+        </div>
+
+        <div
+          id="log-inp-group"
+          class="log-inp-group relative rounded-md w-full p-3 h-full flex flex-col items-start justify-start bg-slate-700 text-slate-300 text-300">
+          <label for="name" class="text-slate-300 text-xl font-semibold mb-1">
+            Chose Your Porfile Picture:
+          </label>
+          <input
+            type="file"
+            name="profile_img"
+            id="profile_img"
+            required
+            class="w-full text-center px-2 p-1 ring-4 ring-green-900 rounded-md outline-none bg-slate-900 text-slate-300 tracking-wide text-lg font-normal" />
+          <label
+            class="absolute text-slate-900 bg-slate-900 w-[110px] h-[35px] left-[19px] bottom-[15px] px-2 py-1">
+          </label>
+        </div>
+        <div
+          class="submit-box mt-4 w-full h-auto flex flex-col items-center justify-center"
+          id="submit-box">
+          <button
+            class="capitalize pointer-events-none text-xl p-1 mb-1 text-slate-100 bg-red-600 rounded-md text-center w-full h-auto tracking-wide font-bold"
+            id="submit-container">
+            Please Fill all the fields and Join with our Family
+          </button>
+          <button
+            type="submit"
+            name="login__submit"
+            id="login__submit"
+            class="pointer-events-none uppercase text-xl p-1 text-slate-100 bg-green-600 rounded-md text-center w-full h-auto tracking-wide duration-500 hover:tracking-widest hover:bg-green-600 hover:text-slate-900 font-bold"
+            id="submit-button">
+            join our familys
+          </button>
+        </div>
+      </form>
+    </section>
+
+    <script>
+      $("#show-cpass").click(function () {
+        if (qs(".con-pass-sec input").type === "password") {
+          qs(".con-pass-sec input").type = "text"
+        } else qs(".con-pass-sec input").type = "password"
+        $(".con-pass-sec").addClass("active")
+      })
+      $("#show-pass").click(function () {
+        if (qs(".pass-sec input").type === "password") {
+          qs(".pass-sec input").type = "text"
+        } else qs(".pass-sec input").type = "password"
+        $(".pass-sec").addClass("active")
+      })
+      $("#hide-cpass").click(function () {
+        if (qs(".con-pass-sec input").type === "text") {
+          qs(".con-pass-sec input").type = "password"
+        } else qs(".con-pass-sec input").type = "text"
+        $(".con-pass-sec").removeClass("active")
+      })
+      $("#hide-pass").click(function () {
+        if (qs(".pass-sec input").type === "text") {
+          qs(".pass-sec input").type = "password"
+        } else qs(".pass-sec input").type = "text"
+        $(".pass-sec").removeClass("active")
+      })
+
+      qsa(".login-input").forEach((item) =>
+        item.addEventListener("keyup", function () {
+          for (var i = 0; i < qsa(".login-input").length; i++) {
+            formSumbition(qsa(".login-input")[i].value)
+          }
+        })
+      )
+
+      function formSumbition(inpVal) {
+        let pass = qsa(".input-pass")
+
+        if (
+          (pass[0].value === pass[1].value ||
+            pass[1].value === pass[0].value) &&
+          (pass[0].value != "" || pass[1].value < 0)
+        ) {
+          if (inpVal === "" || inpVal === null) {
+            qs("#submit-box").classList.remove("active")
+          } else {
+            qs("#submit-box").classList.add("active")
+          }
+        } else {
+          qs("#submit-box").classList.remove("active")
+        }
+
+        if (pass[0].value.length <= 7 && pass[1].value.length <= 7) {
+          qs("#login__submit").classList.add("pointer-events-none")
+          qs("#pass-alert").classList.remove("hidden")
+          qs(".mb-25px").classList.add("mb-[25px]")
+          console.log("Your Password Length Less Than 8 Character")
+        } else {
+          qs("#login__submit").classList.remove("pointer-events-none")
+          qs("#pass-alert").classList.add("hidden")
+          qs(".mb-25px").classList.remove("mb-[25px]")
+        }
+      }
+
+      function qs(cssSelector) {
+        return document.querySelector(cssSelector)
+      }
+      function qsa(cssSelector) {
+        return document.querySelectorAll(cssSelector)
+      }
+    </script>
+  </body>
+</html>

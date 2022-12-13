@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css2?family=Bilbo+Swash+Caps&family=Codystar:wght@300;400&family=Dancing+Script:wght@500&family=Italianno&family=Knewave&family=Pacifico&family=Poppins:ital,wght@0,100;0,400;0,700;0,900;1,600&family=Roboto+Mono:ital,wght@0,100;0,200;0,400;0,700;1,100;1,400;1,700&family=Rubik+Distressed&family=Rubik+Marker+Hatch&display=swap");
+
+.font-bsc {
+  font-family: "Bilbo Swash Caps", cursive !important;
+}
+.font-c {
+  font-family: "Codystar", cursive !important;
+}
+.font-ds {
+  font-family: "Dancing Script", cursive !important;
+}
+.font-i {
+  font-family: "Italianno", cursive !important;
+}
+.font-k {
+  font-family: "Knewave", cursive !important;
+}
+.font-pacifico {
+  font-family: "Pacifico", cursive !important;
+}
+.font-poppins {
+  font-family: "Poppins", sans-serif !important;
+}
+.font-rm {
+  font-family: "Roboto Mono", monospace !important;
+}
+.font-rd {
+  font-family: "Rubik Distressed", cursive !important;
+}
+.font-rmh {
+  font-family: "Rubik Marker Hatch", cursive !important;
+}
+
+body::-webkit-scrollbar {
+  width: 0 !important;
+}
+
+.con-pass-sec.active i:nth-child(3) {
+  display: none;
+}
+.con-pass-sec.active i:nth-child(4) {
+  display: block;
+}
+
+.con-pass-sec i:nth-child(4) {
+  display: none;
+}
+.con-pass-sec i:nth-child(3) {
+  display: block;
+}
+
+.pass-sec.active i:nth-child(3) {
+  display: none;
+}
+.pass-sec.active i:nth-child(4) {
+  display: block;
+}
+
+.pass-sec i:nth-child(4) {
+  display: none;
+}
+.pass-sec i:nth-child(3) {
+  display: block;
+}
+
+#submit-box button:nth-child(1) {
+  display: block;
+}
+#submit-box button:nth-child(2) {
+  display: none;
+}
+#submit-box.active button:nth-child(1) {
+  display: none;
+}
+#submit-box.active button:nth-child(2) {
+  display: block;
+}

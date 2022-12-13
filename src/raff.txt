@@ -1,0 +1,20 @@
+
+<!-- width: 110px;
+    height: 35px;
+    left: 19px;
+    bottom: 15px;
+    background: #000; -->
+
+<!-- <div
+          class="rounded-md mt-3 w-full p-3 h-full flex flex-col items-start justify-start bg-slate-700 text-slate-300 text-300">
+          <input
+            type="submit"
+            name="login__submit"
+            id="login__submit"
+            value="join our family"
+            class="uppercase text-xl p-1 text-slate-100 bg-green-600 rounded-md text-center w-full h-auto tracking-wide duration-500 hover:tracking-widest hover:bg-green-600 hover:text-slate-900 font-bold" />
+        </div> -->
+
+          console.log("Congrates")        // console.log("SYED AMIR ALI")
+        // console.log(inpVal)
+

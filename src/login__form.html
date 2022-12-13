@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lgin Form</title>
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="/dist/output.css" />
+    <!-- <link rel="stylesheet" href="./style.css" /> -->
+    <!-- Some Simple Custom CSS -->
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Bilbo+Swash+Caps&family=Codystar:wght@300;400&family=Dancing+Script:wght@500&family=Italianno&family=Knewave&family=Pacifico&family=Poppins:ital,wght@0,100;0,400;0,700;0,900;1,600&family=Roboto+Mono:ital,wght@0,100;0,200;0,400;0,700;1,100;1,400;1,700&family=Rubik+Distressed&family=Rubik+Marker+Hatch&display=swap");
+
+      .font-pacifico {
+        font-family: "Pacifico", cursive !important;
+      }
+      .font-poppins {
+        font-family: "Poppins", sans-serif !important;
+      }
+
+      .font-rmh {
+        font-family: "Rubik Marker Hatch", cursive !important;
+      }
+
+      body::-webkit-scrollbar {
+        width: 0 !important;
+      }
+
+      .pass-sec.active i:nth-child(3) {
+        display: none;
+      }
+      .pass-sec.active i:nth-child(4) {
+        display: block;
+      }
+
+      .pass-sec i:nth-child(4) {
+        display: none;
+      }
+      .pass-sec i:nth-child(3) {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <section
+      class="form-section w-full min-h-screen max-h-full flex flex-col items-center justify-center bg-slate-900 text-slate-300 font-normal p-4">
+      <div
+        class="log-form-heading mb-4 sm:w-[600px] w-[320px] h-auto p-3 text-slate-900 bg-cyan-500 rounded-lg flex flex-row justify-center items-center">
+        <img
+          src="./welcomes.jpg"
+          class="w-12 h-12 ring-slate-300 ring-2 ring-offset-2 rounded-full mr-4" />
+        <div class="title h-full flex flex-row justify-center items-center">
+          <h1
+            class="uppercase font-pacifico font-bold sm:text-2xl text-[0.9rem]">
+            welcome our family
+          </h1>
+          <h1
+            class="uppercase text-[1.3rem] font-rmh sm:text-4xl ml-2 text-slate-100">
+            iotlink
+          </h1>
+        </div>
+      </div>
+      <!-- Form Started -->
+      <form
+        action=""
+        method="POST"
+        id="login__form"
+        class="login-form sm:w-[600px] w-[340px] items-center justify-center flex flex-col h-full p-4 ring-4 ring-slate-500 bg-slate-900 text-slate-200 rounded-lg">
+        <span class="hidden">@csrf</span>
+
+        <div
+          id="log-inp-group"
+          class="log-inp-group rounded-md mb-2 w-full p-3 h-full flex flex-col items-start justify-start bg-slate-700 text-slate-300 text-300">
+          <label for="name" class="text-slate-300 text-xl font-semibold mb-1">
+            Type Your Original Email:
+          </label>
+          <input
+            type="email"
+            name="fname"
+            id="firsrname"
+            class="login-input w-full px-2 p-1 ring-4 ring-green-900 rounded-md outline-none bg-slate-900 text-white tracking-wide text-lg font-normal"
+            placeholder="@Example: syedamirali@gmail.com" />
+        </div>
+        <div
+          id="log-inp-group"
+          class="log-inp-group pass-sec relative rounded-md mb-2 w-full p-3 h-full flex flex-col items-start justify-start bg-slate-700 text-slate-300 text-300">
+          <label for="name" class="text-slate-300 text-xl font-semibold mb-1">
+            Type Your Password:
+          </label>
+          <input
+            type="password"
+            name="password"
+            id="password"
+            class="input-pass login-input w-full px-2 p-1 ring-4 ring-green-900 rounded-md outline-none bg-slate-900 text-white tracking-wide text-lg font-normal"
+            placeholder="@Example: #kM6$&9!@" />
+          <i
+            id="show-pass"
+            class="bx bx-low-vision absolute right-0 top-0 text-4xl ml-[0px] mr-[10px] p-1 mt-[37.5px] rounded-full duration-300 hover:text-red-500 text-green-500"></i>
+          <i
+            id="hide-pass"
+            class="bx bx-show-alt absolute right-0 top-0 text-4xl ml-[0px] mr-[10px] p-1 mt-[37.5px] rounded-full duration-300 text-red-500 hover:text-green-500"></i>
+          <p
+            id="pass-alert"
+            class="hidden mt-[2px] text-sm text-red-500 font-nor mx-2 capitalize">
+            Your Password Length Less Than 8 Character
+          </p>
+        </div>
+        <div
+          class="submit-box mt-4 w-full h-auto flex flex-col items-center justify-center"
+          id="submit-box">
+          <button
+            type="submit"
+            name="login__submit"
+            id="login__submit"
+            class="text-xl p-1 text-slate-100 bg-green-600 rounded-md text-center w-full h-auto tracking-wide duration-500 hover:tracking-widest hover:bg-green-600 hover:text-slate-900 font-bold"
+            id="submit-button">
+            join our familys
+          </button>
+        </div>
+      </form>
+    </section>
+
+    <script>
+      $("#show-pass").click(function () {
+        if (qs(".pass-sec input").type === "password") {
+          qs(".pass-sec input").type = "text"
+        } else qs(".pass-sec input").type = "password"
+        $(".pass-sec").addClass("active")
+      })
+
+      $("#hide-pass").click(function () {
+        if (qs(".pass-sec input").type === "text") {
+          qs(".pass-sec input").type = "password"
+        } else qs(".pass-sec input").type = "text"
+        $(".pass-sec").removeClass("active")
+      })
+
+      function qs(cssSelector) {
+        return document.querySelector(cssSelector)
+      }
+    </script>
+  </body>
+</html>

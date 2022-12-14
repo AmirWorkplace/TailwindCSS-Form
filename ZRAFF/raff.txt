@@ -18,3 +18,11 @@
           console.log("Congrates")        // console.log("SYED AMIR ALI")
         // console.log(inpVal)
 
+
+        // $("#theme__switch").removeClass("theme__switch")        // $("html").addClass("dark")
+        // $("html").removeClass("dark")
+      // Whenever the user explicitly chooses light mode
+      // Whenever the user explicitly chooses dark mode
+      // Whenever the user explicitly chooses to respect the OS preference
+      // localStorage.removeItem("theme")
+        // $("#theme__switch").removeClass("theme__switch")

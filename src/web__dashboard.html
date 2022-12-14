@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Template Create Page</title>
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="/dist/output.css" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Bilbo+Swash+Caps&family=Codystar:wght@300;400&family=Dancing+Script:wght@500&family=Italianno&family=Knewave&family=Pacifico&family=Poppins:ital,wght@0,100;0,400;0,700;0,900;1,600&family=Roboto+Mono:ital,wght@0,100;0,200;0,400;0,700;1,100;1,400;1,700&family=Rubik+Distressed&family=Rubik+Marker+Hatch&display=swap");
+
+      .font-pacifico {
+        font-family: "Pacifico", cursive !important;
+      }
+
+      .font-poppins {
+        font-family: "Poppins", sans-serif !important;
+      }
+
+      .font-robomono {
+        font-family: "Roboto Mono", sans-serif;
+      }
+
+      .font-rmh {
+        font-family: "Rubik Marker Hatch", cursive !important;
+      }
+      #switch___container::-webkit-scrollbar,
+      body::-webkit-scrollbar {
+        width: 0 !important;
+      }
+
+      .acurate {
+        transform: translateX(5px) rotate(50deg);
+      }
+      .tacc {
+        transform: rotate(45deg);
+      }
+      .htacc:hover {
+        transform: rotate(270deg);
+      }
+
+      /* #main__body__webdashboard.dark-theme {
+        
+      } */
+
+      #responsive__dashbodard__container.responsive__dashbodard__container
+        #responsive__dashbodard__main {
+        opacity: 0;
+        overflow: hidden;
+        margin: 0;
+        padding: 0;
+        width: 0;
+        height: 0;
+        outline: none;
+      }
+
+      .dark #switch__database__table tbody tr td,
+      .dark #switch__database__table thead tr th {
+        padding: 2px;
+        text-align: center;
+        border: 2px solid cyan;
+      }
+
+      #switch__database__table tbody tr td,
+      #switch__database__table thead tr th {
+        padding: 2px;
+        text-align: center;
+        border: 2px solid #00b3ffdd;
+      }
+
+      #responsive__theme__switch.responsive__theme__switch a,
+      #theme__switch.theme__switch a {
+        display: none;
+      }
+
+      #responsive__theme__switch #responsive__theme__liist,
+      #theme__switch #theme__liist {
+        display: none;
+      }
+
+      #responsive__theme__switch a #theme__switch a {
+        display: block;
+      }
+
+      #responsive__theme__switch.responsive__theme__switch
+        #responsive__theme__liist,
+      #theme__switch.theme__switch #theme__liist {
+        display: block;
+      }
+
+      .bg-green {
+        background: #0eb57d !important;
+      }
+
+      @media all and (max-width: 644px) {
+        #switch__database__table tbody tr td,
+        #switch__database__table thead tr th {
+          padding: 1px;
+          text-align: center;
+          border: 1px solid #00b3ffdd;
+          font-size: 14px !important;
+        }
+      }
+    </style>
+  </head>
+
+  <body class="bg-white">
+    <section
+      id="main__body__webdashboard"
+      class="dark-theme w-full h-auto min-h-screen flex flex-col justify-start items-center text-md bg-slate-100 dark:bg-slate-900">
+      <div
+        class="relative w-full h-[72px] flex lg:flex-col flex-row p-4 items-center justify-center bg-slate-100 text-slate-900 dark:text-slate-100 dark:bg-slate-900"
+        id="web__dashheader">
+        <header
+          class="fixed bg-slate-100 h-[72px] text-slate-900 dark:text-slate-100 dark:bg-slate-900 z-10 w-full flex flex-row justify-center lg:justify-between items-center">
+          <div class="logo-sec flex-[1.5] flex flex-row lg:flex-col relative">
+            <a
+              href="#"
+              class="flex items-center gap-3 justify-start w-full lg:w-full h-full">
+              <i
+                class="bx bx-bulb mx-2 ml-3 text-slate-200 text-4xl ring-4 ring-slate-500 rounded-xl p-1 bg-green-500"></i>
+              <h1
+                class="font-rmh font-bold tracking-wide capitalize text-3xl pr-1">
+                Iotlink
+              </h1>
+            </a>
+            <a
+              href="#"
+              class="dashboard__responsive flex lg:hidden w-full h-full items-center justify-end"
+              id="dashboard__responsive">
+              <i
+                class="bx bxs-dashboard ml-3 text-slate-900 text-4xl ring-4 ring-slate-500 rounded-xl p-1 bg-cyan-500 mr-3 duration-500 hover:text-slate-100 hover:bg-violet-500"></i>
+            </a>
+            <div
+              class="responsive__dashbodard__container z-10 mt-[61px] mr-3 absolute top-0 right-0 w-auto h-auto"
+              id="responsive__dashbodard__container">
+              <div
+                id="responsive__dashbodard__main"
+                class="block lg:hidden w-[240px] h-96 ring-4 ring-green-500 rounded-bl-xl rounded-br-xl bg-cyan-500 duration-1000 p-4">
+                <div class="w-full h-full flex flex-col justify-center">
+                  <ul
+                    class="flex flex-col w-full h-full items-center justify-around">
+                    <li
+                      class="font-bold bg-green-500 text-slate-100 hover:bg-blue-500 hover:underline w-full h-auto flex items-center justify-center ring-4 ring-slate-500 rounded-sm uppercase tracking-wide duration-300 hover:tracking-widest py-1 hover:text-yellow-500">
+                      <a href="#">Home</a>
+                    </li>
+                    <li
+                      class="font-bold bg-green-500 text-slate-100 hover:bg-blue-500 hover:underline w-full h-auto flex items-center justify-center ring-4 ring-slate-500 rounded-sm uppercase tracking-wide duration-300 hover:tracking-widest py-1 hover:text-yellow-500">
+                      <a href="#">Themplate</a>
+                    </li>
+                    <li
+                      class="font-bold bg-green-500 text-slate-100 hover:bg-blue-500 hover:underline w-full h-auto flex items-center justify-center ring-4 ring-slate-500 rounded-sm uppercase tracking-wide duration-300 hover:tracking-widest py-1 hover:text-yellow-500">
+                      <a href="#">Web Dashboard</a>
+                    </li>
+                    <li
+                      class="font-bold bg-green-500 text-slate-100 hover:bg-blue-500 hover:underline w-full h-auto flex items-center justify-center ring-4 ring-slate-500 rounded-sm uppercase tracking-wide duration-300 hover:tracking-widest py-1 hover:text-yellow-500">
+                      <a href="#">About</a>
+                    </li>
+                    <li
+                      class="font-bold bg-green-500 text-slate-100 hover:bg-blue-500 hover:underline w-full h-auto flex items-center justify-center ring-4 ring-slate-500 rounded-sm uppercase tracking-wide duration-300 hover:tracking-widest py-1 hover:text-yellow-500">
+                      <a href="#">theme</a>
+                    </li>
+                    <li>
+                      <div
+                        class="responsive__theme__liist w-full h-auto flex flex-row justify-center items-center"
+                        id="responsive__theme__liist">
+                        <i
+                          id="responsive__dark__switch"
+                          class="bx bx-moon p-1 tex-3xl font-bold rounded-full ring-4 ring-slate-500 dark:bg-slate-300 dark:text-slate-800 bg-slate-700 dark:hover:bg-green-500 hover:bg-green-500 text-slate-300 mr-2 duration-300"></i>
+                        <i
+                          id="responsive__light__switch"
+                          class="bx bx-star p-1 tex-3xl font-bold rounded-full ring-4 ring-slate-500 dark:bg-slate-300 dark:text-slate-800 bg-slate-700 dark:hover:bg-green-500 hover:bg-green-500 text-slate-300 ml-2 duration-300"></i>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            id="nav__webdashboard"
+            class="hidden lg:block navber-sec flex-[4]">
+            <div class="flex items-center justify-center w-full h-full">
+              <ul class="flex items-center justify-between w-full h-full px-2">
+                <li
+                  class="flex-[1] flex items-center justify-center w-full h-full gap-2 text-slate-800 text-lg uppercase font-bold hover:text-green-500 dark:hover:text-green-500 hover:tracking-widest duration-300 dark:text-slate-300">
+                  <a href="#">Home</a>
+                </li>
+                <li
+                  class="flex-[1.1] flex items-center justify-center w-full h-full gap-2 text-slate-800 text-lg uppercase font-bold hover:text-green-500 hover:tracking-widest duration-300 dark:text-slate-300 dark:hover:text-green-500">
+                  <a href="#">Themplate</a>
+                </li>
+                <li
+                  class="flex-[2] flex items-center justify-center w-full h-full gap-2 text-slate-800 text-lg uppercase font-bold hover:text-green-500 hover:tracking-widest duration-300 dark:text-slate-300 dark:hover:text-green-500">
+                  <a href="#">Web Dashboard</a>
+                </li>
+                <li
+                  class="flex-[1] flex items-center justify-center w-full h-full gap-2 text-slate-800 text-lg uppercase font-bold hover:text-green-500 hover:tracking-widest duration-300 dark:text-slate-300 dark:hover:text-green-500">
+                  <a href="#">About</a>
+                </li>
+                <li
+                  id="theme__switch"
+                  class="flex-[1] flex items-center justify-center w-full h-full gap-2 text-slate-800 text-lg uppercase font-bold hover:text-green-500 hover:tracking-widest duration-300 dark:text-slate-300 dark:hover:text-green-500">
+                  <a href="#">theme</a>
+                  <div
+                    class="theme__liist w-full items-center"
+                    id="theme__liist">
+                    <i
+                      id="dark__switch"
+                      class="bx bx-moon p-1 tex-3xl font-bold rounded-full ring-4 ring-slate-500 dark:bg-slate-300 dark:text-slate-800 bg-slate-700 dark:hover:bg-green-500 hover:bg-green-500 text-slate-300 mr-2 duration-300"></i>
+                    <i
+                      id="light__switch"
+                      class="bx bx-star p-1 tex-3xl font-bold rounded-full ring-4 ring-slate-500 dark:bg-slate-300 dark:text-slate-800 bg-slate-700 dark:hover:bg-green-500 hover:bg-green-500 text-slate-300 ml-2 duration-300"></i>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div
+            id="profile__webdashboard"
+            class="hidden lg:block profile-sec flex-[1.5]">
+            <a
+              href="#"
+              class="flex items-center justify-end w-full h-full pr-3">
+              <img
+                src="./welcomes.jpg"
+                class="w-12 h-12 rounded-full ring-4 ring-slate-500 mx-3" />
+              <div
+                class="title__webdash leading-[0.7] w-auto h-full flex flex-col items-start justify-center pt-1">
+                <h3
+                  class="name leading-[0] mb-3 uppercase text-xl font-semibold tracking-wide">
+                  syed amir ali
+                </h3>
+                <p
+                  class="divice-status leading-[0.7] text-green-700 font-normal text-md capitalize">
+                  <span class="uppercase font-semibold font-robomono">
+                    ESP32
+                  </span>
+                  is Connected
+                </p>
+                <p
+                  class="Status leading-[0.9] text-md text-blue-600 font-normal flex gap-1">
+                  <span class="underline">Active Now</span>
+                  <i class="bx bxs-circle ml-2 text-[8px] mt-[6.5px]"></i>
+                </p>
+              </div>
+            </a>
+          </div>
+        </header>
+      </div>
+      <span
+        class="w-full h-auto relative bg-slate-100 text-slate-900 dark:text-slate-100 dark:bg-slate-900">
+        <hr class="fixed top-[70px] z-10 left-0 w-full h-1 bg-green-500 mb-3" />
+        <hr
+          class="fixed top-[74px] z-[8] left-0 w-full h-10 mb-3 bg-slate-100 text-slate-900 dark:text-slate-100 dark:bg-slate-900" />
+      </span>
+
+      <!-- ?MAIN CONTENT? -->
+      <div id="main__content__section" class="lg:mt-[0] mt-12">
+        <!-- !SWITCH! -->
+        <div
+          class="addswitch__and__showswitch flex flex-col lg:flex-row min-h-[87vh] w-full gap-16 justify-center items-center"
+          id="addswitch__and__showswitch">
+          <div
+            id="switch__add__section"
+            class="flex-[1] h-auto mt-5 flex flex-col w-full justify-center items-center">
+            <form
+              action=""
+              method="POST"
+              id="switch__addform"
+              class="switch__addform relative sm:w-[600px] w-[340px] h-[482px] items-center justify-center flex flex-col p-4 ring-4 ring-slate-500 bg-slate-100 text-slate-900 dark:text-slate-300 dark:bg-slate-900 rounded-lg">
+              <span class="hidden">@csrf</span>
+              <div
+                id="log-inp-group"
+                class="log-inp-group rounded-md mb-2 w-full p-3 h-full flex flex-col items-start justify-start bg-slate-300 text-slate-900 dark:text-slate-300 dark:bg-slate-700">
+                <label
+                  for="name"
+                  class="bg-slate-300 text-slate-900 dark:text-slate-300 dark:bg-slate-700 text-xl font-semibold mb-1">
+                  Type Your Switch Name:
+                </label>
+                <input
+                  type="text"
+                  name="switch_name"
+                  id="switch_name"
+                  class="login-input w-full px-2 p-1 ring-4 ring-green-900 rounded-md outline-none bg-slate-200 text-slate-900 dark:text-slate-300 dark:bg-slate-800 tracking-wide text-lg font-normal"
+                  placeholder="@Example: IOT PROJECTS" />
+              </div>
+              <div
+                id="log-inp-group"
+                class="log-inp-group rounded-md mb-2 w-full p-3 h-full flex flex-col items-start justify-start bg-slate-300 text-slate-900 dark:text-slate-300 dark:bg-slate-700">
+                <label
+                  for="name"
+                  class="bg-slate-300 text-slate-900 dark:text-slate-300 dark:bg-slate-700 text-xl font-semibold mb-1">
+                  Type Your Switch Title:
+                </label>
+                <input
+                  type="text"
+                  name="switch_title"
+                  id="switch_title"
+                  class="login-input w-full px-2 p-1 ring-4 ring-green-900 rounded-md outline-none bg-slate-200 text-slate-900 dark:text-slate-300 dark:bg-slate-800 tracking-wide text-lg font-normal"
+                  placeholder="@Example: Using Respberry Pi PICO with ESP8266" />
+              </div>
+              <div
+                id="log-inp-group"
+                class="log-inp-group relative rounded-md mb-2 w-full p-3 h-full flex flex-col items-start justify-start bg-slate-300 text-slate-900 dark:text-slate-300 dark:bg-slate-700">
+                <label
+                  for="name"
+                  class="bg-slate-300 text-slate-900 dark:text-slate-300 dark:bg-slate-700 text-xl font-semibold mb-1">
+                  Select a Vertual Pin:
+                </label>
+                <input
+                  type="number"
+                  name="vertual_pin"
+                  id="vertual_pin"
+                  class="vertual_pin w-full px-2 p-1 ring-4 ring-green-900 rounded-md outline-none bg-slate-200 text-slate-900 dark:text-slate-300 dark:bg-slate-800 tracking-wide font-semibold text-xl pl-[24px]"
+                  placeholder="@Example: 0" />
+                <span
+                  class="absolute top-0 left-0 text-xl p-1 dark:bg-slate-900 dark:text-slate-200 bg-slate-200 text-slate-900 font-semibold mt-[44px] ml-[15px] uppercase">
+                  V
+                </span>
+              </div>
+              <div
+                id="log-inp-group"
+                class="log-inp-group rounded-md mb-2 w-full p-3 h-full flex flex-col items-start justify-start bg-slate-300 text-slate-900 dark:text-slate-300 dark:bg-slate-700 text-300">
+                <label
+                  for="name"
+                  class="bg-slate-300 text-slate-900 dark:text-slate-300 dark:bg-slate-700 text-xl font-semibold mb-1">
+                  Select Switch ON/OFF Value:
+                </label>
+                <select
+                  type="text"
+                  name="switch_value"
+                  id="switch_value"
+                  class="login-input w-full px-2 p-1 ring-4 ring-green-900 rounded-md outline-none bg-slate-200 text-slate-900 dark:text-slate-300 dark:bg-slate-800 tracking-wide text-lg font-normal"
+                  placeholder="@Example: Using Respberry Pi PICO with ESP8266">
+                  <option selected hidden class="text-slate-400">
+                    @Example OFF: 0
+                  </option>
+                  <option value="0">0</option>
+                  <option value="1">1</option>
+                </select>
+              </div>
+
+              <div
+                class="submit-box mt-4 w-full h-auto flex flex-col items-center justify-center"
+                id="submit-box">
+                <button
+                  type="submit"
+                  name="login__submit"
+                  id="login__submit"
+                  class="uppercase text-xl p-1 text-slate-100 bg-green-600 rounded-md text-center w-full h-auto tracking-wide duration-500 hover:tracking-widest hover:bg-green-600 hover:text-slate-900 font-bold"
+                  id="submit-button">
+                  add a switch
+                </button>
+              </div>
+            </form>
+          </div>
+          <div
+            id="switch__section"
+            class="relative flex-[1] mt-5 h-auto flex flex-col w-full justify-center items-center">
+            <span
+              class="w-[330px] lg:w-full sm:w-[595px] sm:ml-[px] lg:ml-[0] ml-[5px] md:ml-[100px] absolute top-0 left-0 h-6 mt-[16px] rounded-xl dark:bg-slate-900 bg-slate-100 dark:text-slate-200 text-slate-900"></span>
+            <div
+              id="switch___container"
+              class="sm:w-[600px] w-[340px] my-4 items-center justify-center flex flex-col h-[482px] p-4 ring-4 ring-slate-500 dark:bg-slate-900 bg-slate-100 dark:text-slate-200 text-slate-900 rounded-lg overflow-x-hidden overflow-y-scroll py-4">
+              <div class="mx-6 w-full h-full pb-7">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum
+                optio facere exercitationem doloremque, veritatis consequatur,
+                quas ipsam pariatur quis, dolorum asperiores nulla atque fugiat
+                dignissimos. Saepe porro amet qui. Repudiandae! Lorem ipsum
+                dolor sit amet consectetur adipisicing elit. Necessitatibus
+                veritatis corrupti minima doloremque quas fugiat fugit placeat
+                esse vel provident, facilis corporis recusandae distinctio quia
+                excepturi maiores. Assumenda, nulla rerum! Lorem ipsum dolor sit
+                amet consectetur, adipisicing elit. Harum sequi dignissimos
+                doloribus repellat ducimus magnam autem maxime. Praesentium
+                consequuntur dolorem doloribus porro fugiat a exercitationem
+                beatae! Accusantium quae suscipit aspernatur. Lorem ipsum dolor
+                sit amet consectetur adipisicing elit. Possimus suscipit eos
+                explicabo dolorum soluta hic dolorem tempore, praesentium
+                laborum tenetur nemo enim totam. Enim ratione consequatur
+                possimus cum tempore ipsa! Lorem ipsum, dolor sit amet
+                consectetur adipisicing elit. Maxime voluptate dolores
+                voluptatibus ab quisquam saepe porro ipsum et, eum nam impedit,
+                iure expedita nisi dolor hic corrupti harum illum id?Lorem ipsum
+                dolor sit amet consectetur adipisicing elit. Laborum optio
+                facere exercitationem doloremque, veritatis consequatur, quas
+                ipsam pariatur quis, dolorum asperiores nulla atque fugiat
+                dignissimos. Saepe porro amet qui. Repudiandae! Lorem ipsum
+                dolor sit amet consectetur adipisicing elit. Necessitatibus
+                veritatis corrupti minima doloremque quas fugiat fugit placeat
+                esse vel provident, facilis corporis recusandae distinctio quia
+                excepturi maiores. Assumenda, nulla rerum! Lorem ipsum dolor sit
+                amet consectetur, adipisicing elit. Harum sequi dignissimos
+                doloribus repellat ducimus magnam autem maxime. Praesentium
+                consequuntur dolorem doloribus porro fugiat a exercitationem
+                beatae! Accusantium quae suscipit aspernatur. Lorem ipsum dolor
+                sit amet consectetur adipisicing elit. Possimus suscipit eos
+                explicabo dolorum soluta hic dolorem tempore, praesentium
+                laborum tenetur nemo enim totam. Enim ratione consequatur
+                possimus cum tempore ipsa! Lorem ipsum, dolor sit amet
+                consectetur adipisicing elit. Maxime voluptate dolores
+                voluptatibus ab quisquam saepe porro ipsum et, eum nam impedit,
+                iure expedita nisi dolor hic corrupti harum illum id?
+              </div>
+            </div>
+            <span
+              class="w-[330px] lg:w-full sm:w-[595px] sm:ml-[90px] lg:ml-[0] ml-[5px] md:ml-[100px] absolute bottom-0 left-0 h-6 rounded-xl mb-[16px] dark:bg-slate-900 bg-slate-100 dark:text-slate-200 text-slate-900"></span>
+          </div>
+        </div>
+        <div id="switch__dbtable__section" class="w-full h-auto">
+          <div
+            class="db__box ring-4 ring-slate-500 rounded-xl mt-6 mb-8 p-4 sm:w-full w-[340px] h-auto flex flex-col items-center justify-center"
+            id="db__box__switch">
+            <table
+              id="switch__database__table"
+              class="w-full h-full bg-slate-100 sm:text-lg text-[16px] text-slate-900 dark:text-slate-100 dark:bg-slate-900">
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Auth Token</th>
+                  <th>Template Name</th>
+                  <th>Switch Name</th>
+                  <th>Vertual Pin</th>
+                  <th>Switch Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td class="break-all">Siofnor89976KLnkfidm8954LosmnhMgZ</td>
+                  <td>Collage IOT</td>
+                  <td>LED 1</td>
+                  <td>V0</td>
+                  <td class="text-green-400 text-2xl font-bold">0</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td class="break-all">Siofnor89976KLnkfidm8954LosmnhMgZ</td>
+                  <td>Collage IOT</td>
+                  <td>LED 1</td>
+                  <td>V0</td>
+                  <td class="text-green-400 text-2xl font-bold">0</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td class="break-all">Siofnor89976KLnkfidm8954LosmnhMgZ</td>
+                  <td>Collage IOT</td>
+                  <td>LED 1</td>
+                  <td>V0</td>
+                  <td class="text-green-400 text-2xl font-bold">0</td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td class="break-all">Siofnor89976KLnkfidm8954LosmnhMgZ</td>
+                  <td>Collage IOT</td>
+                  <td>LED 1</td>
+                  <td>V0</td>
+                  <td class="text-green-400 text-2xl font-bold">0</td>
+                </tr>
+                <tr>
+                  <td>5</td>
+                  <td class="break-all">Siofnor89976KLnkfidm8954LosmnhMgZ</td>
+                  <td>Collage IOT</td>
+                  <td>LED 1</td>
+                  <td>V0</td>
+                  <td class="text-green-400 text-2xl font-bold">0</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      $("#dashboard__responsive i").click(function () {
+        $("#responsive__dashbodard__container").toggleClass(
+          "responsive__dashbodard__container"
+        )
+      })
+
+      $("#theme__switch").click(function () {
+        $("#theme__switch").addClass("theme__switch")
+      })
+
+      $("#dark__switch").click(function () {
+        $("html").addClass("dark")
+        localStorage.theme = "dark"
+        $("#dark__switch").addClass("bg-green")
+        $("#light__switch").removeClass("bg-green")
+        console.log("dark")
+      })
+
+      $("#light__switch").click(function () {
+        $("html").removeClass("dark")
+        localStorage.theme = "light"
+        $("#light__switch").addClass("bg-green")
+        $("#dark__switch").removeClass("bg-green")
+        console.log("light__switch")
+      })
+
+      $("#responsive__light__switch").click(function () {
+        $("html").removeClass("dark")
+        localStorage.theme = "light"
+        $("#responsive__dark__switch").removeClass("bg-green")
+        $("#responsive__light__switch").addClass("bg-green")
+      })
+
+      $("#responsive__dark__switch").click(function () {
+        $("html").addClass("dark")
+        $("#responsive__dark__switch").addClass("bg-green")
+        $("#responsive__light__switch").removeClass("bg-green")
+      })
+      const qs = (cssSelector) => {
+        return document.querySelector(cssSelector)
+      }
+    </script>
+
+    <!-- !THEME! -->
+    <script>
+      if (
+        localStorage.theme === "dark" ||
+        (!("theme" in localStorage) &&
+          window.matchMedia("(prefers-color-scheme: dark)").matches)
+      ) {
+        document.documentElement.classList.add("dark")
+        $("#responsive__dark__switch").addClass("bg-green")
+        $("#dark__switch").addClass("bg-green")
+        $("#responsive__light__switch").removeClass("bg-green")
+        $("#light__switch").removeClass("bg-green")
+      } else {
+        document.documentElement.classList.remove("dark")
+        $("#responsive__dark__switch").removeClass("bg-green")
+        $("#dark__switch").removeClass("bg-green")
+        $("#responsive__light__switch").addClass("bg-green")
+        $("#light__switch").addClass("bg-green")
+      }
+    </script>
+  </body>
+</html>

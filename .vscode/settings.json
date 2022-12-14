@@ -1,3 +1,24 @@
 {
-  "editor.wordWrapColumn": 100
+  "editor.wordWrapColumn": 100,
+  "inlineFold.maskChar": "______",
+  "inlineFold.supportedLanguages": [
+    "vue",
+    "html",
+    "svelte",
+    "vue-html",
+    "php",
+    "blade",
+    "erb",
+    "twig",
+    "nunjucks",
+    "django-html",
+    "jinja-html",
+    "javascript",
+    "typescript",
+    "javascriptreact",
+    "typescriptreact",
+    "php",
+    "blade"
+  ],
+  "inlineFold.unfoldOnLineSelect": true
 }
